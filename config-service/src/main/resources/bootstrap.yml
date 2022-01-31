@@ -4,9 +4,9 @@ server:
 spring:
   cloud:
     config:
-      server:
+      server:https://github.com/FranciscoFavelaNajera/Microservicios.git
         git:
-          uri: https://github.com/FranciscoFavelaNajera/Microservicios.git
+          uri:
           searchPaths: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
