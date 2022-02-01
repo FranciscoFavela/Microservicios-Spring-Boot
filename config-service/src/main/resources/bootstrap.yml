@@ -4,9 +4,9 @@ server:
 spring:
   cloud:
     config:
-      server:https://github.com/FranciscoFavelaNajera/Microservicios.git
+      server:
         git:
-          uri:
+          uri: https://github.com/digitallab-academy/ms-course-youtube.git
           searchPaths: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
