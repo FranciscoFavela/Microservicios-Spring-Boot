@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:${SERVER_PORT:0}}
+
+spring:
+  application:
+    name: appoiment-service
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
+      fail-fast: true
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+
+
+
+
+#spring.datasource.url=jdbc:h2:mem:appoimentdb
+#spring.datasource.driverClassName=org.h2.Driver
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
